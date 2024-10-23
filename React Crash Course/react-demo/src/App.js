@@ -1,24 +1,26 @@
-import logo from './logo.svg';
 import './index.css';
 import './App.css';
+import {Greet} from './components/Greet'
+import { Message } from './components/Message';
+import { ClickHandler } from './components/ClickHandler';
+import { ParentComponent } from './components/ParentComponent';
+import { UserGreeting } from './components/UserGreeting';
+import { NameList } from './components/NameList';
+import { StyleSheet } from './components/StyleSheet';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p className='text-red-600 '>
-          Hello World
-        </p>
-        <a
-          className="text-red-500"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <Greet name='Bruce' heroName='batman'>
+          <button className='bg-slate-500'>This is children</button>
+        </Greet>
+        <Message />
+        <ClickHandler />
+        <ParentComponent />
+        <UserGreeting />
+        <NameList />
+        <StyleSheet />
+        
     </div>
   );
 }
